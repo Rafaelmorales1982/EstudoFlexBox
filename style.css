@@ -1,0 +1,53 @@
+/*Trabalhando com flexbox*/
+
+main {
+  border: solid 5px red;
+}
+
+div {
+  /*cria borda linha solida 5px laranja*/
+  border: solid 5px orange;
+  font-size: 40px;
+  /*dando espaçamento externo para todos os lados*/
+  margin: 5px;
+}
+
+.caixa {
+  /*trabalha unidimensional ou  seja, em uma unica linha*/
+  /*assim todos elementos que estiverem dentro dessa class ficam um ao lado
+    do outro em formato de row ou seja linha*/
+  /*trabalha com eixo horizontal e vertical*/
+  display: flex;
+
+  /*Colocar em eixo vertical coluna*/
+ /* flex-direction: column;*/
+
+  /*ele muda coluna invertida ou seja inverte a ordem*/
+  /*flex-direction: column-reverse;*/
+
+  /*
+    flex-direction: row-reverse; - deixa em linha e deixa os itens  invertido
+    flex-direction: row; - deixa em linha ou seja horizontal
+    */
+  /* flex-wrap: wrap; quebra linha*/
+  /**/
+  /*
+  flex-flow: row wrap; cria uma lina e quebra de linha, mesma coisa que flex-warp
+  */
+
+  /* flex-flow: row-reverse wrap;  linha com itens invertidos e com quebra de linha*/
+  /*alinhamento dos itens iniciando no começo*/
+  /*justify-content: flex-start;*/
+  width: 30%;
+  flex-flow: row wrap;
+  
+  justify-content: flex-start;
+  /*os itens dentro container ficam encostado na direita */
+  justify-content: flex-end;
+    /*os itens dentro container ficam  no centro */
+  justify-content: center;
+/*preenche os espaços em volta dos elementos, onde esse espaços ficam iguais*/
+  justify-content: space-around;
+
+  
+}
