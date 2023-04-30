@@ -1,0 +1,67 @@
+/*===============SEÇÃO TAGS=================*/
+main {
+  /*criando uma borda solida 5px de espeçura cor vermelha*/
+  border: solid 5px red;
+}
+
+div {
+  border: solid 5px green;
+  font-size: 40px;
+}
+
+/*===============SEÇÃO CLASSs=================*/
+.caixa {
+  /*que indica que o tamanho agora levará em conta até a borda -- ou seja, 
+  o width será a soma do conteúdo com a borda e o padding.*/
+  box-sizing: border-box;
+}
+
+/*Todos os elementos (DIVs) que estiver dentro da caixa ou seja na class caixa 
+serão display flex*/
+.caixa {
+  /*assim os elementos(DIVs) que estão dentro ficaram um ao lado do outro*/
+  display: flex;
+  width: 600px;
+  height: 300px;
+
+}
+
+/*Utilizando pseudo classes :nth-child() para selecionar qual eu quero*/
+/*selecionando elemento filho da class pai .caixa*/
+.caixa div:nth-child(3) {
+  background-color: black;
+  color: #fff;
+  /*Order serve para mudar a posição da ordem do elemento
+    se o número for negativo vai para posição esquerda e positivo para direita*/
+  order: -1; /*assim o elemento vai ser o primeiro pois por padrão
+    todos os elemento são 0*/
+  align-self: center; /*o conteúdo que dentro da div fica centralizado*/
+  align-self: flex-end; /*o conteúdo que dentro da div fica no final*/
+  align-self: flex-start; /*o conteúdo que dentro da div fica no topo primeiro*/
+  align-self: stretch; /*o conteúdo que dentro da div fica padrão*/
+  
+}
+/*A caixa tem a largura de 600px e contém 4 divs dentro dela
+adicionei 100px a cada div mas quero preencher o espaço da class .caixa para os elementos
+que estão deintro dessa classe*/
+.caixa div {
+  width: 100px;
+ /* flex-grow: 1; todas as divs que estão dentro do main dividiram
+    espaço e aumentaram de tamanho para 150px cada*/
+}
+
+.caixa {
+  width: 600px;
+}
+
+.caixa div:nth-child(2) {
+  /*diminuir o tamanho da div selecionada (peso menor)*/
+  flex-shrink: 2;
+}
+
+.caixa div {
+  /*se nossas divs estiver row aumenta tamanho largura horizontal
+    agora se tiver column aumenta tamanho vertical*/
+    
+    flex-basis: 100px;
+}
